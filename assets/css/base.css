@@ -1,0 +1,36 @@
+:root {
+  --primary-color: #ee4d2d;
+  --text-color: rgba(102, 102, 102, 0.85);
+  --hover-color: rgba(17, 17, 17, 0.85);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: Quicksand, Quicksand1, Quicksand2, sans-serif;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url("../../assets/fonts/fl-icons.woff2");
+}
+
+@font-face {
+  font-family: Quicksand1;
+  src: url("../../assets/fonts/fl-icons.woff2");
+}
+
+@font-face {
+  font-family: Quicksand2;
+  src: url("../../assets/fonts/fl-icons.woff2");
+}
