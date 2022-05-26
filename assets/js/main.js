@@ -1,3 +1,5 @@
+// xử lí khi nhập tim kiếm
+
 const InputSearch = document.querySelector('.input')
 const searchBtn = document.querySelector('.search-btn')
 
