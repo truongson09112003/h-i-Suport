@@ -29,3 +29,58 @@ InputSearch.oninput = function (e) {
         `
     }
 }
+
+// handle Nav mobile dat ten bien theo cameKey
+
+const iconNav = document.querySelector('.nav-mobile-icon')
+const navMobile = document.querySelector('.nav-mobile-list')
+const closeBtnMobile = document.querySelector('.close-nav-mobile')
+const overLayMoblile = document.querySelector('.overLay-mobile')
+const cartMobile = document.querySelector('.cart-mobile')
+const cartListMobile = document.querySelector('.cart-mobile-shop')
+const overlayMobileCart = document.querySelector('.overlay-mobile-cart')
+const closeMobileCart = document.querySelector('.close-nav-mobile-cart')
+
+iconNav.onclick = () => {
+    navMobile.style.display = 'block'
+    overLayMoblile.style.display = 'block'
+}
+
+closeBtnMobile.onclick = () => {
+    navMobile.style.display = 'none'
+    overLayMoblile.style.display = 'none'
+}
+
+overLayMoblile.onclick = () => {
+    navMobile.style.display = 'none'
+    overLayMoblile.style.display = 'none'
+}
+
+
+//handle cart mobile
+
+cartMobile.onclick = () => {
+    cartListMobile.style.display = 'block'
+    overlayMobileCart.style.display = 'block'
+}
+
+closeMobileCart.onclick = () => {
+    cartListMobile.style.display = 'none'
+    overlayMobileCart.style.display = 'none'
+}
+
+overlayMobileCart.onclick = () => {
+    console.log('Test')
+    cartListMobile.style.display = 'none'
+    overlayMobileCart.style.display = 'none'
+}
+
+// ngăn chạn hiện tượng nổi bọt
+
+navMobile.onclick = (e) => {
+    e.stopPropagation()
+}
+
+cartListMobile.onclick = (e) => {
+    e.stopPropagation()
+}

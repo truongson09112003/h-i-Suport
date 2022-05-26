@@ -1,0 +1,198 @@
+@media (max-width: 768px) {
+  .img-heading {
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .nav-mobile-icon {
+    font-size: 26px;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+
+  .nav-mobile-icon:hover {
+    color: var(--hover-color);
+  }
+
+  .right-heading {
+    display: none;
+  }
+
+  .heading-Search {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-mobile-list {
+    position: fixed;
+    background-color: #fff;
+    width: 50%;
+    border-right: 1px solid #ccc;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    animation: FadeIn ease-in 0.6s forwards;
+    z-index: 1;
+    display: none;
+  }
+
+  @keyframes FadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .close-nav-mobile {
+    position: absolute;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    padding: 10px;
+    top: 0;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .close-nav-mobile:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+  }
+
+  .list-mobile-page {
+    margin-top: 60px;
+
+    list-style: none;
+  }
+
+  .input-search-heading {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .text-nav-mobile {
+    padding: 10px 0px;
+  }
+
+  .search-btn-mobile {
+    background-color: rgb(144, 144, 249);
+    cursor: pointer;
+  }
+
+  .nav-mobile-list-item {
+    padding: 10px 0;
+    cursor: pointer;
+    padding-left: 20px;
+  }
+
+  .nav-mobile-list-item-modifine {
+    display: block;
+    padding: 15px 0;
+    width: 100%;
+    padding-left: 20px;
+    width: 90%;
+    margin: 0 auto;
+    cursor: text;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .nav-mobile-list-item-hover:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .text-nav-mobile {
+    padding-left: 20px;
+  }
+
+  .overLay-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: none;
+  }
+}
+
+/* Có thể viết css ra ngoài bởi vì đã có class ẩn trên PC trong thư viện */
+
+.cart-mobile {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.icon-cart-mobile {
+  font-size: 24px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.icon-cart-mobile:hover {
+  color: var(--hover-color);
+}
+
+.cart-mobile-shop {
+  position: fixed;
+  width: 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 1;
+  transform: translateX(100%);
+  animation: FadeOut ease-in 0.6s forwards;
+  display: none;
+}
+
+@keyframes FadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cart-mobile-parents {
+  z-index: 1;
+}
+
+.close-nav-mobile-cart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.close-nav-mobile-cart:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+.cart-mobile-shop-list {
+  margin-top: 60px;
+  list-style: none;
+}
+
+.cart-mobile-no-cart {
+  display: flex;
+  margin: 100px 0;
+}
+
+.overlay-mobile-cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 0;
+  display: none;
+}

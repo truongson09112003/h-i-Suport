@@ -28,16 +28,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link rel="stylesheet" href="./assets/css/Grid.css" />
-    <link rel="stylesheet" href="./assets/css/reponsive.css" />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/reponsive.css" />
+
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
   </head>
   <body>
     <div id="root">
       <div class="grid wide">
-        <div class="row no-gutters heading">
+        <div class="row no-gutters heading c-o-l-1">
           <!-- <div class="heading-list__time"> -->
           <div class="heading-list__time">
             <i class="fa-solid fa-clock"></i>
@@ -60,6 +61,64 @@
           </ul>
         </div>
         <div class="row no-gutters heading-Search">
+          <div class="overLay-mobile"></div>
+          <div class="nav-mobile l-0">
+            <i class="nav-mobile-icon fa-solid fa-bars"></i>
+            <div class="nav-mobile-list">
+              <div class="close-nav-mobile">X</div>
+              <ul class="list-mobile-page">
+                <li class="nav-mobile-list-item_B">
+                  <div class="input-search-heading">
+                    <input
+                      type="text"
+                      class="input"
+                      placeholder="Nhập từ khóa tìm kiếm của bạn...."
+                    />
+                    <div class="search-btn">
+                      <i
+                        class="search-btn-icon fa-solid fa-magnifying-glass"
+                      ></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-mobile-list-item-BH">
+                  <h4 class="text-nav-mobile">Kiểm tra bảo hành</h4>
+                  <div class="input-search-heading">
+                    <input
+                      type="text"
+                      class="input"
+                      placeholder="Nhập từ khóa tìm kiếm của bạn...."
+                    />
+                    <div class="search-btn search-btn-mobile">Tìm</div>
+                  </div>
+                </li>
+                <li class="nav-mobile-list-item nav-mobile-list-item-modifine">
+                  DANH MỤC SẢN PHẨM
+                </li>
+                <li class="nav-mobile-list-item nav-mobile-list-item-hover">
+                  Giới Thiệu
+                </li>
+                <li class="nav-mobile-list-item nav-mobile-list-item-hover">
+                  Dịch vụ sửa chữa
+                </li>
+                <li class="nav-mobile-list-item nav-mobile-list-item-hover">
+                  Hướng dẫn mua hàng
+                </li>
+                <li class="nav-mobile-list-item nav-mobile-list-item-hover">
+                  Tin công nghệ
+                </li>
+                <li class="nav-mobile-list-item nav-mobile-list-item-hover">
+                  Bảo hành, hậu mãi
+                </li>
+                <li class="nav-mobile-list-item nav-mobile-list-item-hover">
+                  Liên hệ
+                </li>
+                <li class="nav-mobile-list-item nav-mobile-list-item-hover">
+                  Đăng nhập
+                </li>
+              </ul>
+            </div>
+          </div>
           <div class="img-heading">
             <img
               src="https://phukienmaytinh.vn/wp-content/uploads/2019/11/logo-hinh.png.webp"
@@ -69,11 +128,11 @@
               data-ll-status="loaded"
             />
           </div>
-          <div class="Contact-heading">
+          <div class="Contact-heading c-o-l-1">
             <span class="contact-text">Phụ Kiện Máy Tính</span>
             <p class="contact-text_1">Hotline: 0879.870.870 - 0981.700.760</p>
           </div>
-          <div class="right-heading">
+          <div class="right-heading c-o-l-1">
             <div class="input-search-heading">
               <input
                 type="text"
@@ -92,6 +151,20 @@
               </div>
             </button>
           </div>
+          <button class="cart-mobile l-0">
+            <i class="icon-cart-mobile fa-solid fa-cart-arrow-down"></i>
+            <div class="overlay-mobile-cart"></div>
+            <div class="cart-mobile-shop">
+              <div class="close-nav-mobile-cart">X</div>
+              <ul class="cart-mobile-shop-list">
+                <li class="cart-mobile-shop-item">
+                  <h4 class="cart-mobile-no-cart">
+                    Không có sản phẩm nào trong giỏ hàng của bạn
+                  </h4>
+                </li>
+              </ul>
+            </div>
+          </button>
         </div>
       </div>
       <div class="nav"></div>
