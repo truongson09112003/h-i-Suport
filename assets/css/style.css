@@ -122,10 +122,6 @@
   border-bottom-right-radius: 6px;
 }
 
-.search-btn-icon {
-  display: none;
-}
-
 .loading-search-api {
   animation: Rotates linear 0.8s infinite;
 }
