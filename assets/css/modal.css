@@ -1,0 +1,177 @@
+.overlay-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 0;
+}
+
+.modal {
+  z-index: 100;
+}
+
+.container-modal {
+  width: 876px;
+  height: 544px;
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  z-index: 1;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: ModalFame linear 0.7s;
+}
+
+@keyframes ModalFame {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.register {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.login {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.modal-width {
+  width: 90%;
+}
+
+.Text-modal {
+  text-align: left;
+}
+
+.parents-modal {
+  width: 100%;
+}
+
+.input-modal-register {
+  height: 44px;
+  display: block;
+  width: 90%;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding-left: 6px;
+}
+
+.label-modal {
+  padding: 12px 0;
+  display: block;
+}
+
+.status-modal {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+  align-items: center;
+}
+
+.submit {
+  background-color: #fff;
+  outline: none;
+  width: 152px;
+  height: 44px;
+  border: none;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.check-save {
+  display: block;
+  margin-left: 38px;
+  cursor: pointer;
+}
+
+.text-check-save {
+  font-size: 14px;
+}
+
+.text-not-pass {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.text-not-pass:hover {
+  color: #ee4d2d;
+}
+
+.subit-login {
+  margin-top: 30px;
+}
+
+.login::after {
+  content: "";
+  width: 0.5px;
+  height: 85%;
+  background-color: #ccc;
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  padding: 10px;
+  padding-right: 16px;
+  cursor: pointer;
+  z-index: 10000000;
+  user-select: none;
+}
+
+.close-modal:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .container-modal {
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+    overflow-y: auto;
+  }
+
+  .container-modal::-webkit-scrollbar {
+    display: none;
+  }
+
+  .register {
+    width: 100%;
+  }
+  .login {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .input-modal-register {
+    width: 100%;
+  }
+
+  .status-modal {
+    width: 100%;
+  }
+
+  .check-save {
+    margin-left: auto;
+    margin-right: 8px;
+  }
+}

@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/reponsive.css" />
+    <link rel="stylesheet" href="./assets/css/modal.css" />
 
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
@@ -57,7 +58,9 @@
             <li class="heading-list__item">Hướng dẫn mua hàng</li>
             <li class="heading-list__item">Giới Thiệu</li>
             <li class="heading-list__item">Liên Hệ</li>
-            <li class="heading-list__item">Đăng nhập / Đăng ký</li>
+            <li class="heading-list__item heading-list__item-click">
+              Đăng nhập / Đăng ký
+            </li>
           </ul>
         </div>
         <div class="row no-gutters heading-Search">
@@ -113,7 +116,9 @@
                 <li class="nav-mobile-list-item nav-mobile-list-item-hover">
                   Liên hệ
                 </li>
-                <li class="nav-mobile-list-item nav-mobile-list-item-hover">
+                <li
+                  class="nav-mobile-list-item nav-mobile-list-item-hover nav-mobile-list-item-register-login"
+                >
                   Đăng nhập
                 </li>
               </ul>
@@ -169,6 +174,6 @@
       <div class="nav"></div>
     </div>
 
-    <script src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
   </body>
 </html>

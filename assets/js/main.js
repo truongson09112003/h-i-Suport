@@ -1,3 +1,7 @@
+import Modal from './modal.js';
+// inport file JS
+
+
 // xử lí khi nhập tim kiếm
 
 const InputSearch = document.querySelector('.input')
@@ -79,4 +83,41 @@ navMobile.onclick = (e) => {
 
 cartListMobile.onclick = (e) => {
     e.stopPropagation()
+}
+
+
+//modal render 
+
+// const modal = document.querySelector('.modal')
+const modalClickItem = document.querySelector('.heading-list__item-click')
+const root = document.querySelector('#root')
+const loginRegisterMobileBtn = document.querySelector('.nav-mobile-list-item-register-login')
+
+const htmlModal = Modal()
+
+const modal = document.createElement('div')
+modal.classList.add('modal')
+
+modalClickItem.onclick = () => {
+    modal.innerHTML = htmlModal
+
+    root.appendChild(modal)
+}
+
+
+root.onclick = (e) => {
+    if (e.target.closest('.modal .close-modal')) {
+        root.removeChild(modal)
+    }
+
+    if (e.target.closest('.modal .overlay-modal')) {
+        root.removeChild(modal)
+    }
+}
+
+loginRegisterMobileBtn.onclick = (e) => {
+    modal.innerHTML = htmlModal
+    root.appendChild(modal)
+    navMobile.style.display = 'none'
+    overLayMoblile.style.display = 'none'
 }

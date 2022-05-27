@@ -86,6 +86,7 @@
     padding: 10px 0;
     cursor: pointer;
     padding-left: 20px;
+    user-select: none;
   }
 
   .nav-mobile-list-item-modifine {
