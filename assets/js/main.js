@@ -38,7 +38,6 @@ const closeBtnMobile = document.querySelector('.close-nav-mobile')
 const overLayMoblile = document.querySelector('.overLay-mobile')
 const cartMobile = document.querySelector('.cart-mobile')
 const cartListMobile = document.querySelector('.cart-mobile-shop')
-const overlayMobileCart = document.querySelector('.overlay-mobile-cart')
 const closeMobileCart = document.querySelector('.close-nav-mobile-cart')
 
 iconNav.onclick = () => {
@@ -54,6 +53,7 @@ closeBtnMobile.onclick = () => {
 overLayMoblile.onclick = () => {
     navMobile.style.display = 'none'
     overLayMoblile.style.display = 'none'
+    cartListMobile.style.display = 'none'
 }
 
 
@@ -61,19 +61,15 @@ overLayMoblile.onclick = () => {
 
 cartMobile.onclick = () => {
     cartListMobile.style.display = 'block'
-    overlayMobileCart.style.display = 'block'
+    overLayMoblile.style.display = 'block'
 }
 
 closeMobileCart.onclick = () => {
     cartListMobile.style.display = 'none'
+    overLayMoblile.style.display = 'none'
     overlayMobileCart.style.display = 'none'
 }
 
-overlayMobileCart.onclick = () => {
-    console.log('Test')
-    cartListMobile.style.display = 'none'
-    overlayMobileCart.style.display = 'none'
-}
 
 // ngăn chạn hiện tượng nổi bọt
 
