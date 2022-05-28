@@ -58,8 +58,13 @@
             <li class="heading-list__item">Hướng dẫn mua hàng</li>
             <li class="heading-list__item">Giới Thiệu</li>
             <li class="heading-list__item">Liên Hệ</li>
-            <li class="heading-list__item heading-list__item-click">
+            <li
+              class="heading-list__item heading-list__item-click heading-list__item-no-login"
+            >
               Đăng nhập / Đăng ký
+            </li>
+            <li class="heading-list__item login-true">
+              <img class="avatar-PC" src="" alt="" />
             </li>
           </ul>
         </div>
@@ -117,9 +122,25 @@
                   Liên hệ
                 </li>
                 <li
-                  class="nav-mobile-list-item nav-mobile-list-item-hover nav-mobile-list-item-register-login"
+                  class="nav-mobile-list-item mobile-no-login nav-mobile-list-item-hover nav-mobile-list-item-register-login"
                 >
                   Đăng nhập
+                </li>
+                <li
+                  class="nav-mobile-list-item nav-mobile-list-item-hover nav-mobile-list-item-mobile-true-login"
+                >
+                  <h4>Tài khoản của bạn ❤️</h4>
+                  <div class="img-introduce">
+                    <img
+                      src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/27adec26bc9e800098c172e777b18900~c5_100x100.jpeg?x-expires=1653904800&x-signature=Lb1aSlYqZ2PgA2DWuJteMTIimVE%3D"
+                      alt=""
+                      class="img-avatar-mobile"
+                    />
+                    <div class="introduce">
+                      <h5 class="fullName-mobile">Nguyễn Trường Sơn</h5>
+                      <p class="address-mobile">Hương Lung Cẩm Khê Phú Thọ</p>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -172,6 +193,83 @@
         </div>
       </div>
       <div class="nav"></div>
+    </div>
+
+    <div class="modal">
+      <div class="overlay-modal"></div>
+      <div class="container-modal">
+        <div class="close-modal">X</div>
+        <div class="register">
+          <div class="modal-width">
+            <h1 class="Text-modal">Đăng Ký</h1>
+            <div class="parents-modal">
+              <label for="rigister-TK" class="label-modal"
+                >Tên tài khoản hoặc đia chỉ gmail *</label
+              >
+              <input
+                type="text"
+                id="rigister-TK"
+                class="input-modal-register input-modal-register-1"
+                placeholder="Vui lòng nhập email của bạn"
+              />
+            </div>
+            <div class="parents-modal">
+              <label for="Righister-pass" class="label-modal">Mật khẩu *</label>
+              <input
+                type="password"
+                id="Righister-pass"
+                class="input-modal-register input-modal-register-login"
+                placeholder="Vui lòng nhập mật khâu của bạn"
+              />
+            </div>
+            <div class="status-modal">
+              <button class="submit submit-Register">Đăng Nhập</button>
+              <input type="checkbox" class="check-save" />
+              <h3 class="text-check-save">Ghi nhớ mật khẩu</h3>
+            </div>
+            <h3 class="text-not-pass">Quên mật khẩu?</h3>
+          </div>
+        </div>
+        <div class="login">
+          <div class="modal-width">
+            <h1 class="Text-modal">Đăng Nhập</h1>
+            <div class="parents-modal">
+              <label for="login-modal" class="label-modal"
+                >Tên tài khoản *</label
+              >
+              <input
+                type="text"
+                class="input-modal-login input-modal-register"
+                id="login-modal"
+                placeholder="Vui lòng nhập email của bạn"
+              />
+            </div>
+            <div class="parents-modal">
+              <label for="email-modal" class="label-modal"
+                >Địa chỉ email *</label
+              >
+              <input
+                type="email"
+                class="input-modal-login input-modal-register"
+                id="email-modal"
+                placeholder="Vui lòng nhập email của bạn"
+              />
+            </div>
+            <div class="parents-modal">
+              <label for="login-modal-pass" class="label-modal"
+                >Mật khẩu *</label
+              >
+              <input
+                type="password"
+                class="input-modal-login input-modal-register"
+                id="login-modal-pass"
+                placeholder="Vui lòng nhập email của bạn"
+              />
+            </div>
+            <button class="subit-login submit">Đăng Ký</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="./assets/js/main.js"></script>

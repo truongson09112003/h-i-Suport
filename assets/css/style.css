@@ -1,6 +1,8 @@
 .heading {
   color: var(--text-color);
   font-weight: 400;
+  align-items: center;
+  max-height: 40px;
 }
 .heading__list {
   display: flex;
@@ -186,4 +188,16 @@
 
 .no-cart {
   color: #999;
+}
+
+.avatar-PC {
+  margin-top: 10px;
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.login-true {
+  display: none;
 }

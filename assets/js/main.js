@@ -1,5 +1,4 @@
-import Modal from './modal.js';
-// inport file JS
+const root = document.querySelector('#root')
 
 
 // xử lí khi nhập tim kiếm
@@ -60,6 +59,13 @@ overLayMoblile.onclick = () => {
     cartListMobile.style.display = 'none'
 }
 
+// handle modal mobile
+const LoginMobileBtn = document.querySelector('.nav-mobile-list-item-register-login')
+
+LoginMobileBtn.onclick = () => {
+    navMobile.style.display = 'none'
+    modal.style.display = 'block'
+}
 
 //handle cart mobile
 
@@ -86,38 +92,153 @@ cartListMobile.onclick = (e) => {
 }
 
 
-//modal render 
 
-// const modal = document.querySelector('.modal')
-const modalClickItem = document.querySelector('.heading-list__item-click')
-const root = document.querySelector('#root')
-const loginRegisterMobileBtn = document.querySelector('.nav-mobile-list-item-register-login')
 
-const htmlModal = Modal()
+// handle API Login
 
-const modal = document.createElement('div')
-modal.classList.add('modal')
+const Test = document.querySelector('.nav-mobile-list-item-hover--test')
+const API_LOGIN = 'https://api-write-by-truongson.herokuapp.com/posts'
+const LoginRegister = document.querySelector('.heading-list__item-click')
+const modal = document.querySelector('.modal')
+const OverlayModal = document.querySelector('.overlay-modal')
+const closeModal = document.querySelector('.close-modal')
+const inputRegister = document.querySelector('.input-modal-register-1')
+const inputLogin = document.querySelector('.input-modal-register-login')
+const noLogin = document.querySelector('.heading-list__item-no-login')
+const loginTrue = document.querySelector('.login-true')
+const avatarPC = document.querySelector('.avatar-PC')
+const submitRegister = document.querySelector('.submit-Register')
 
-modalClickItem.onclick = () => {
-    modal.innerHTML = htmlModal
+//mobile 
+const MobileNoLogin = document.querySelector('.mobile-no-login')
+const MobileTrueLogin = document.querySelector('.nav-mobile-list-item-mobile-true-login')
+const avatarMobile = document.querySelector('.img-avatar-mobile')
+const fullNameMobileModal = document.querySelector('.fullName-mobile')
+const addRessMobileModal = document.querySelector('.address-mobile')
+var value = {};
 
-    root.appendChild(modal)
+LoginRegister.onclick = (e) => {
+    modal.style.display = 'block'
 }
 
-
-root.onclick = (e) => {
-    if (e.target.closest('.modal .close-modal')) {
-        root.removeChild(modal)
-    }
-
-    if (e.target.closest('.modal .overlay-modal')) {
-        root.removeChild(modal)
-    }
-}
-
-loginRegisterMobileBtn.onclick = (e) => {
-    modal.innerHTML = htmlModal
-    root.appendChild(modal)
-    navMobile.style.display = 'none'
+OverlayModal.onclick = () => {
+    modal.style.display = 'none'
     overLayMoblile.style.display = 'none'
+}
+closeModal.onclick = () => {
+    modal.style.display = 'none'
+    overLayMoblile.style.display = 'none'
+}
+
+//handle input login
+let isinputRegister = false;
+let isinputLogin = false;
+
+
+
+fetch(API_LOGIN)
+    .then(response => response.json())
+    .then(response => {
+        const users = response.map(user => {
+            return user
+        })
+
+        inputRegister.onchange = (e) => {
+            for (let i = 0; i < users.length; i++) {
+                if (e.target.value === users[i].useraccount) {
+                    value = users[i]
+                    localStorage.setItem('value', JSON.stringify(value))
+                    isinputRegister = !isinputRegister;
+                    localStorage.setItem('isinputRegister', true)
+                    break;
+                } else {
+                    localStorage.setItem('isinputRegister', false)
+                }
+            }
+        }
+
+        inputLogin.onchange = (e) => {
+            if (e.target.value === value.password) {
+                isinputLogin = !isinputLogin;
+                localStorage.setItem('isinputLogin', true)
+            } else {
+                localStorage.setItem('isinputLogin', false)
+            }
+        }
+
+    })
+
+let save1;
+let save2;
+
+
+submitRegister.onclick = () => {
+
+    const localIsRegister = JSON.parse(localStorage.getItem('isinputRegister'))
+    const localIsLogin = JSON.parse(localStorage.getItem('isinputLogin'))
+
+
+
+    console.log(localIsRegister)
+
+    if (localIsRegister && localIsLogin) {
+
+        inputRegister.value = ''
+        inputLogin.value = ''
+        overLayMoblile.style.display = 'none'
+        modal.style.display = 'none'
+
+        save1 = localIsRegister
+        save2 = localIsLogin
+
+        localStorage.setItem('save1', localIsRegister)
+        localStorage.setItem('save2', localIsLogin)
+
+        localStorage.setItem('noLogin', JSON.stringify('none'))
+        localStorage.setItem('loginTrue', JSON.stringify('block'))
+
+
+        const LocalNoLogin = JSON.parse(localStorage.getItem('noLogin'))
+        const LocalLoginTrue = JSON.parse(localStorage.getItem('loginTrue'))
+
+        noLogin.style.display = LocalNoLogin
+        loginTrue.style.display = LocalLoginTrue
+
+        MobileNoLogin.style.display = LocalNoLogin
+        MobileTrueLogin.style.display = LocalLoginTrue
+
+
+        const valueLocal = JSON.parse(localStorage.getItem('value'))
+
+        avatarPC.src = `${valueLocal.img}`
+        avatarMobile.src = `${valueLocal.img}`
+    } else {
+        localStorage.setItem('noLogin', JSON.stringify('block'))
+        localStorage.setItem('loginTrue', JSON.stringify('none'))
+    }
+}
+
+const LocalSave1 = JSON.parse(localStorage.getItem('save1'))
+const LocalSave2 = JSON.parse(localStorage.getItem('save2'))
+
+
+if (LocalSave1 && LocalSave2) {
+
+    const LocalNoLogin = JSON.parse(localStorage.getItem('noLogin'))
+    const LocalLoginTrue = JSON.parse(localStorage.getItem('loginTrue'))
+
+    const valueLocal = JSON.parse(localStorage.getItem('value'))
+
+    avatarPC.src = `${valueLocal.img}`
+    avatarMobile.src = `${valueLocal.img}`
+
+    noLogin.style.display = LocalNoLogin
+    loginTrue.style.display = LocalLoginTrue
+
+    MobileNoLogin.style.display = LocalNoLogin
+    MobileTrueLogin.style.display = LocalLoginTrue
+
+    const valueLocal2 = JSON.parse(localStorage.getItem('value'))
+    fullNameMobileModal.innerText = valueLocal2.fullName
+    addRessMobileModal.innerText = valueLocal2.addRess
 }

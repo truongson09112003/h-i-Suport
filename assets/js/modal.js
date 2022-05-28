@@ -77,4 +77,42 @@ function Modal() {
     `
 }
 
+
+
+// //modal render
+
+// // const modal = document.querySelector('.modal')
+// const modalClickItem = document.querySelector('.heading-list__item-click')
+// const loginRegisterMobileBtn = document.querySelector('.nav-mobile-list-item-register-login')
+
+// const htmlModal = Modal()
+
+// const modal = document.createElement('div')
+// modal.classList.add('modal')
+
+// modalClickItem.onclick = () => {
+//     modal.innerHTML = htmlModal
+//     root.appendChild(modal)
+// }
+
+
+// root.onclick = (e) => {
+//     if (e.target.closest('.modal .close-modal')) {
+//         alert('Test')
+//         root.removeChild(modal)
+//     }
+
+//     if (e.target.closest('.modal .overlay-modal')) {
+//         root.removeChild(modal)
+//     }
+// }
+
+// loginRegisterMobileBtn.onclick = (e) => {
+//     modal.innerHTML = htmlModal
+//     root.appendChild(modal)
+//     navMobile.style.display = 'none'
+//     overLayMoblile.style.display = 'none'
+// }
+
+
 export default Modal;
