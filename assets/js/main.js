@@ -115,6 +115,7 @@ const MobileTrueLogin = document.querySelector('.nav-mobile-list-item-mobile-tru
 const avatarMobile = document.querySelector('.img-avatar-mobile')
 const fullNameMobileModal = document.querySelector('.fullName-mobile')
 const addRessMobileModal = document.querySelector('.address-mobile')
+
 var value = {};
 
 LoginRegister.onclick = (e) => {
