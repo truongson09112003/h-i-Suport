@@ -97,7 +97,7 @@ cartListMobile.onclick = (e) => {
 // handle API Login
 
 const Test = document.querySelector('.nav-mobile-list-item-hover--test')
-const API_LOGIN = 'https://api-write-by-truongson.herokuapp.com/posts'
+const API_LOGIN = 'https://api-write-by-truongson.herokuapp.com/users'
 const LoginRegister = document.querySelector('.heading-list__item-click')
 const modal = document.querySelector('.modal')
 const OverlayModal = document.querySelector('.overlay-modal')
@@ -149,7 +149,8 @@ fetch(API_LOGIN)
                 if (e.target.value === users[i].useraccount) {
                     value = users[i]
                     localStorage.setItem('value', JSON.stringify(value))
-                    isinputRegister = !isinputRegister;
+                    isinputRegister = true;
+                    console.log('test')
                     localStorage.setItem('isinputRegister', true)
                     break;
                 } else {
@@ -240,6 +241,9 @@ if (LocalSave1 && LocalSave2) {
     MobileTrueLogin.style.display = LocalLoginTrue
 
     const valueLocal2 = JSON.parse(localStorage.getItem('value'))
+
+    console.log(valueLocal2)
+
     fullNameMobileModal.innerText = valueLocal2.fullName
     addRessMobileModal.innerText = valueLocal2.addRess
 }
